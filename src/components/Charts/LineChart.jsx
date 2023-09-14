@@ -137,12 +137,11 @@ const LineChart = () => {
 
   return (
     <Line 
-      data={data}
-      // height={250}
+      data={data} 
       options={options}
       plugins={[plugin]}
     />
   )
-}
+} 
 
 export default LineChart
