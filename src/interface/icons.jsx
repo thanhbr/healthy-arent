@@ -57,7 +57,7 @@ export const ICON = {
     <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect opacity="0.01" width="56" height="56" fill="white"/>
       <g clipPath="url(#clip0_0_102)">
-      <path fillRule="evenodd" clip-rule="evenodd" d="M45 12.0464C42.7853 12.0464 40.9036 10.3071 40.9036 8H15.1486C15.1486 10.304 13.2163 12.0464 11 12.0464V14.6671H45V12.0464ZM12.7004 17.9999L17.9067 48H38.2008L43.3013 17.9999H12.7004ZM39.2861 21.3264L38.1519 28H17.954L16.8198 21.3264H39.2861ZM20.7872 44.6672L19.6532 38.0001H36.4528L35.3203 44.6672H20.7872Z" fill="white"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M45 12.0464C42.7853 12.0464 40.9036 10.3071 40.9036 8H15.1486C15.1486 10.304 13.2163 12.0464 11 12.0464V14.6671H45V12.0464ZM12.7004 17.9999L17.9067 48H38.2008L43.3013 17.9999H12.7004ZM39.2861 21.3264L38.1519 28H17.954L16.8198 21.3264H39.2861ZM20.7872 44.6672L19.6532 38.0001H36.4528L35.3203 44.6672H20.7872Z" fill="white"/>
       </g>
       <defs>
       <clipPath id="clip0_0_102">
@@ -72,8 +72,8 @@ export const ICON = {
       <path d="M0 33.5L58 0L116 33.5V100.5L58 134L0 100.5L0 33.5Z" fill="url(#paint0_linear_42282_8)"/>
       <defs>
       <linearGradient id="paint0_linear_42282_8" x1="25.9565" y1="165.202" x2="147.019" y2="118.302" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFCC21"/>
-      <stop offset="1" stop-color="#FF963C"/>
+      <stop stopColor="#FFCC21"/>
+      <stop offset="1" stopColor="#FF963C"/>
       </linearGradient>
       </defs>
     </svg>

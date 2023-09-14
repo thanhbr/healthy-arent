@@ -13,7 +13,7 @@
 }
 
 .overview-bg-hidden {
-  width: 540px;
+  width: 100%;
   height: 312px;
   background: linear-gradient(225deg, #FFCC21 0%, #FF963C 100%);
   opacity: 0.9988;
