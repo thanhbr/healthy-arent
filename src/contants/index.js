@@ -1,6 +1,25 @@
 import imgSandwich from "../assets/images/food/sandwich.png"
 import imgOrigiriRice from "../assets/images/food/origiri-rice.png"
+import imgMeal from "../assets/images/food/meal.png"
+import {ICON} from "../interface/icons"
 
+export const navLinks = [
+  {
+    id: "home",
+    title: "自分の記録",
+    icon: ICON.memo
+  },
+  {
+    id: "features",
+    title: "チャレンジ",
+    icon: ICON.challenge
+  },
+  {
+    id: "product",
+    title: "お知らせ",
+    icon: ICON.info
+  },
+];
 
 export const foods = [
   {
@@ -78,3 +97,10 @@ export const foods = [
     date: '05.18'
   }
 ]
+
+export const mealOverview = {
+  image: imgMeal,
+  complete: 5,
+  total: 21,
+  percent: 71,
+}

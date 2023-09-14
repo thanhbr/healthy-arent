@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar />
       <Overview />
-      {/*<Food />*/}
+      <Food />
       <Statistical />
       <Category />
     </>

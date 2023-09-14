@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: 'NotoSansJP';
-  src: local('NotoSansJP'), url(./src/assets/fonts/NotoSansJP/NotoSansJP-VariableFont_wght.ttf) format('woff');
+  src: local('NotoSansJP'), url(./src/assets/fonts/NotoSansJP/NotoSansJP-VariableFont_wght.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Inter';
-  src: local('Inter'), url(./src/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format('woff');
+  src: local('Inter'), url(./src/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format('truetype');
 }
 
 

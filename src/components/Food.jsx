@@ -5,15 +5,12 @@ const Food = () => {
   return (
     <div>
       {foods?.map(item => (
-        <>
-          <h3
-            key={item.id}
-            className={'font-sansCJK_JP'}
-          >
+        <div key={item.id}>
+          <p className={'font-sansCJK_JP'}>
             {item?.name}
-          </h3>
+          </p>
           <img src={item?.image} alt={item?.name}/>
-        </>
+        </div>
       ))}
     </div>
   )
