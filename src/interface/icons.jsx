@@ -45,6 +45,5 @@ export const ICON = {
       <path d="M3 16H29" stroke="#FF963C" strokeWidth="3"/>
       <path d="M3 24H29" stroke="#FF963C" strokeWidth="3"/>
     </svg>
-
-  )
+  ),
 }

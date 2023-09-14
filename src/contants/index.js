@@ -102,5 +102,5 @@ export const mealOverview = {
   image: imgMeal,
   complete: 5,
   total: 21,
-  percent: 71,
+  percent: 75,
 }

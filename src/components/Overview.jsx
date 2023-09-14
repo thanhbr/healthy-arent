@@ -15,8 +15,15 @@ export default Overview
 
 const OverviewLeft = () => {
   return (
-    <div className='w-fit'>
-      <img src={mealOverview.image} alt='meal' />
+    <div className='w-fit relative'>
+      <img src={mealOverview?.image} alt='meal' />
+      <div className='overview-bg-hidden' />
+      <div className='overview-circle' />
+      <div className='text-light overview-info-index'>
+        <span className='text-[18px]'>0{mealOverview?.complete}/</span>
+        <span className='text-[18px]'>{mealOverview?.total}  </span>
+        <span className='text-[25px]'>{mealOverview?.percent}%</span>
+      </div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { ICON } from '../interface/icons'
 
 const Navbar = () => {
   return (
-    <nav className='bg-dark_500_text w-full flex py-4 justify-between items-center fixed'>
+    <nav className='bg-dark_500_text w-full flex py-4 justify-between items-center fixed z-50'>
       <div className='container-page mx-auto flex'>
         <img src={logo} alt='healthy' className='w-[120px] h-[32px] cursor-pointer' />
         
