@@ -1,10 +1,19 @@
-@import url("https://fonts.google.com/noto/specimen/Noto+Sans+JP");
-@import url("https://fonts.google.com/specimen/Inter");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@font-face {
+  font-family: 'NotoSansJP';
+  src: local('NotoSansJP'), url(./src/assets/fonts/NotoSansJP/NotoSansJP-VariableFont_wght.ttf) format('woff');
+}
 
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./src/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format('woff');
+}
+
+
+:root {
+  font-family: NotoSansJP;
 }
