@@ -1,15 +1,11 @@
 import './App.css'
-import {Navbar, Statistical, Overview, Food, Category} from "./components";
+import HomePage from './pages/Home';
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Overview />
-      <Food />
-      <Statistical />
-      <Category />
+      <HomePage />
     </>
   )
 }

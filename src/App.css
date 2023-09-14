@@ -33,12 +33,24 @@
   border-left: 3px solid transparent;
 
   position: absolute;
-  top: 46px;
-  left: 160px;
+  top: 56px;
+  left: 166px;
 }
 
 .overview-info-index {
   position: absolute;
-  top: 122px;
-  left: 206px;
+  top: 136px;
+  left: 220px;
+}
+
+.bg-linear {
+  background: linear-gradient(33deg, #FFCC21 8.75%, #FF963C 86.64%);
+}
+
+.food-btn-more {
+  margin-top: 28px;
+
+  width: 296px;
+  height: 56px;
+  border-radius: 4px;
 }
