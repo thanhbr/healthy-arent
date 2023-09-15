@@ -4,13 +4,14 @@ import { navLinks } from "../contants"
 import { ICON } from '../interface/icons'
 import DrawMenu from './DrawMenu'
 import useNavbar from '../pages/Home/hooks/useNavbar'
+import { Link } from 'react-scroll'
 
 function useOutsideAlerter(ref) {
   const {methods} = useNavbar()
   useEffect(() => {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
-        methods.toggleMenu()
+        setTimeout(() => methods.toggleMenu(),500)
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -28,7 +29,9 @@ const Navbar = () => {
   return (
     <nav className='bg-dark_500_text w-full flex py-4 justify-between items-center fixed z-50'>
       <div className='container-page mx-auto flex'>
-        <img src={logo} alt='healthy' className='w-[120px] h-[32px] cursor-pointer' />
+        <Link to={'home-overview'}>
+          <img src={logo} alt='healthy' className='w-[120px] h-[32px] cursor-pointer' />
+        </Link>
         
         <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
           {navLinks?.map((nav, index) => (
@@ -37,9 +40,9 @@ const Navbar = () => {
               className={`font-sansCJK_JP font-normal relative cursor-pointer items-center text-[16px] text-white flex gap-2 ${index === navLinks?.length - 1 ? 'mr-0' : 'mr-10'}`}
             >
               {nav?.icon}
-              <a href={`#${nav.id}`}>
+              <Link to={nav?.to || ''} offset={-100}>
                 {nav.title}
-              </a>
+              </Link>
               {nav.id === 'product' && 
                 <span className='absolute top-[-4px] left-[24px] bg-primary_500 w-[16px] text-center rounded-[50%] text-[10px]'>1</span>
               }

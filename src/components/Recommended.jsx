@@ -7,7 +7,7 @@ const Recommended = () => {
   const { categories, listRecommended, showMoreRecommended, methods } = useRecommended()
 
   return (
-    <section className='mt-[56px]'>
+    <section className='mt-[56px]' id="home-recommended">
       <Category data={categories} />
       <ListRecommended 
         data={listRecommended} 

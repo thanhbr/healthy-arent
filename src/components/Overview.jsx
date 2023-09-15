@@ -2,9 +2,9 @@ import React from 'react'
 import { mealOverview } from '../contants'
 import LineChart from './Charts/LineChart.jsx';
 
-const  Overview = () => {
+const Overview = () => {
   return (
-    <section className='pt-[64px] flex' id='home'>
+    <section id='home-overview'  className='pt-[64px] flex'>
       <OverviewLeft />
       <OverviewRight />
     </section>

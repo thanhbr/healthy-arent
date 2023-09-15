@@ -8,7 +8,7 @@ const  Statistical = () => {
   const { myRecord, tableExercise, tableDiary, showMoreDiary, methods } = useStatistical()
 
   return (
-    <section className='container-page mt-[72px]'>
+    <section id="home-statistical" className='container-page mt-[72px]'>
       <div>
         <MyRecord data={myRecord} />
       </div>

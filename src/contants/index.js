@@ -23,7 +23,8 @@ export const navLinks = [
   {
     id: "home",
     title: "自分の記録",
-    icon: ICON.memo
+    icon: ICON.memo,
+    to: 'home-recommended'
   },
   {
     id: "features",
@@ -40,7 +41,8 @@ export const navLinks = [
 export const menuLink = [
   {
     id: 1,
-    name: '自分の記録'
+    name: '自分の記録',
+    to: 'home-statistical' 
   },
   {
     id: 2,
@@ -56,7 +58,8 @@ export const menuLink = [
   },
   {
     id: 5,
-    name: 'コラム一覧'
+    name: 'コラム一覧',
+    to: 'home-recommended'
   },
   {
     id: 6,
