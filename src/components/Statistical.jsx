@@ -1,7 +1,7 @@
 import React from 'react'
 import LineChart from './Charts/LineChart'
 
-const Statistical = () => {
+const  Statistical = () => {
   return (
     <section className='container-page mt-[72px]'>
       <div className='grid grid-cols-3'>
