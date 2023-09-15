@@ -45,7 +45,8 @@ export const homeAction = {
   UPDATE_RECOMMENDED_CATEGORY: 'UPDATE_RECOMMENDED_CATEGORY',
   UPDATE_RECOMMENDED_LIST: 'UPDATE_RECOMMENDED_LIST',
 
-  UPDATE_FOOTER_LIST: 'UPDATE_FOOTER_LIST'
+  UPDATE_FOOTER_LISCROLL_TO_TOPST: 'UPDATE_FOOTER_LIST',
+  SCROLL_TO_TOP: 'SCROLL_TO_TOP'
 }
 
 export const homeReducer = (state, action) => {
@@ -139,6 +140,12 @@ export const homeReducer = (state, action) => {
           ...state?.footer,
           list: action.payload
         } 
+      }
+
+    case homeAction.SCROLL_TO_TOP:
+      return {
+        ...state,
+        scrollTop: action.payload
       }
     default: break
   }

@@ -41,7 +41,7 @@ const ListRecommended = ({data, ...props}) => {
     <div {...props}>
       <div className='grid grid-cols-4 gap-[8px] container-page'>
         {data.map(item => (
-          <div key={item.id }>
+          <div key={item.id}>
             <div className='relative'>
               <ReactImageFallback
                 src={item?.image}
@@ -59,8 +59,8 @@ const ListRecommended = ({data, ...props}) => {
                 {item?.title || '---'}
               </p>
               <div className='flex'>
-                {item?.tags?.map(tag => (
-                  <p className='text-primary_400 font-thin text-[12px] tracking-[0.06px]'>
+                {item?.tags?.map((tag, index) => (
+                  <p key={item.id + index} className='text-primary_400 font-thin text-[12px] tracking-[0.06px]'>
                     #{tag || '---'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </p>
                 ))}

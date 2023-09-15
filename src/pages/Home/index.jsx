@@ -3,6 +3,7 @@ import { Recommended, Food, Navbar, Overview, Statistical } from '../../componen
 import useHome from './hooks/useHome'
 import { HomeProvider } from './provider'
 import Footer from '../../components/Footer'
+import ScrollButton from '../../components/ScrollButton'
 
 const HomePage = () => {
   const {provider, fetchOrigin} = useHome()
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Statistical />
       <Recommended />
       <Footer />
+      <ScrollButton />
     </HomeProvider>
   )
 }
