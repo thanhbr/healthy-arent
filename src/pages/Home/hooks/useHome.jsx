@@ -53,7 +53,6 @@ const useHome = () => {
       payload: recommendedList
     })
   }
-  console.log('state', state)
 
   return {
     fetchOrigin,

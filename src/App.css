@@ -49,8 +49,14 @@
 
 .food-btn-more {
   margin-top: 28px;
+  color: #fff;
 
   width: 296px;
   height: 56px;
   border-radius: 4px;
+}
+
+.statistical-record--title {
+  left: calc(50% - 100px);
+  top: calc(50% - 50px);
 }

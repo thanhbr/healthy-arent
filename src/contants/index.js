@@ -6,6 +6,9 @@ import imgCurryRice from "../assets/images/food/curry-rice.png"
 import imgHotDog from "../assets/images/food/hot-dog.png"
 import imgChocolate from "../assets/images/food/chocolate.png"
 import imgMeal from "../assets/images/food/meal.png"
+import imgBodyRecord from "../assets/images/statistical/body-record.png"
+import imgMyDiary from "../assets/images/statistical/my-diary.png"
+import imgMyExercise from "../assets/images/statistical/my-exercise.png"
 import {ICON} from "../interface/icons"
 
 export const navLinks = [
@@ -162,24 +165,27 @@ export const statisticalHeader = [
   {
     id: 1,
     title: 'BODY RECORD',
-    languageJapan: '自分のカラダの記録'
+    languageJapan: '自分のカラダの記録',
+    image: imgBodyRecord
   },
   {
     id: 2,
     title: 'MY EXERCISE',
-    languageJapan: '自分の運動の記録'
+    languageJapan: '自分の運動の記録',
+    image: imgMyDiary
   },
   {
     id: 3,
     title: 'MY DIARY',
-    languageJapan: '自分の日記'
+    languageJapan: '自分の日記',
+    image: imgMyExercise
   },
 ]
 
 export const statisticalBodyRecord = [
   {
     id: 1,
-    labels: ['6月', '7月', '8月', '9月', '10月', '11月', '12月', '1月', '2月', '3月', '4月', '5月'],
+    labels: ['6月', '7月', '8月', '9 月', '10月', '11月', '12月', '1月', '2月', '3月', '4月', '5月'],
     data: [39, 35, 30, 28, 23, 22, 20, 19,17,13,10,0],
     color: '#8FE9D0'
   },
