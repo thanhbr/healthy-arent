@@ -21,53 +21,21 @@ ChartJS.register(
   Legend
 )
 
-const LineChart = () => {
+const LineChart = ({dataChart, type}) => {
   var data = {
-    labels: ['6月', '7月', '8月', '9月', '10月', '11月', '12月', '1月', '2月', '3月', '4月', '5月'],
-    datasets: [{
-      label: '',
-      data: [39, 35, 30, 28, 23, 22, 20, 19,17,13,10,0],
-      backgroundColor: [
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-      ],
-      borderColor: [
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-        '#8FE9D0',
-      ],
-      borderWidth: 3
-    },
-    {
-      labels: ['6月', '7月', '8月', '9月', '10月', '11月', '12月', '1月', '2月', '3月', '4月', '5月'],
-      data: [39, 37, 28, 32, 30, 27, 31, 26,25,24,23,25],
-      backgroundColor: [
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-      ],
-      borderColor: [
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-        '#FFCC21',
-      ],
-      borderWidth: 3
-    }]
+    labels: dataChart?.labels || [],
+    datasets: dataChart?.data?.map(item => {
+      return {
+        data: item?.data,
+        backgroundColor: item?.data?.map(bg => {
+          return item.color
+        }),
+        borderColor: item?.data?.map(bg => {
+          return item.color
+        }),
+        borderWidth: 3
+      }
+    }) 
   };
 
   var options = {
@@ -136,11 +104,13 @@ const LineChart = () => {
 
 
   return (
-    <Line 
-      data={data} 
-      options={options}
-      plugins={[plugin]}
-    />
+    <>
+      <Line 
+        data={data} 
+        options={options}
+        plugins={[plugin]}
+      />
+    </>
   )
 } 
 

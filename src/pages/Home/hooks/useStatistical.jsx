@@ -5,6 +5,7 @@ import { homeAction } from '../provider/_reducer'
 const useStatistical = () => {
   const {state, dispatch} = useContext(HomeContext)
 
+  const chartRecord = state?.statistical?.chartRecord
   const myRecord = state?.statistical?.myRecord
   const tableExercise = state?.statistical?.tableExercise
   const tableDiary = state?.statistical?.tableDiary
@@ -19,6 +20,7 @@ const useStatistical = () => {
   }
 
   return {
+    chartRecord,
     myRecord,
     tableExercise,
     tableDiary,

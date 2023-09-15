@@ -5,7 +5,7 @@ import ReactImageFallback from 'react-image-fallback'
 import Button from './Button'
 
 const  Statistical = () => {
-  const { myRecord, tableExercise, tableDiary, showMoreDiary, methods } = useStatistical()
+  const { chartRecord, myRecord, tableExercise, tableDiary, showMoreDiary, methods } = useStatistical()
 
   return (
     <section id="home-statistical" className='container-page mt-[72px]'>
@@ -14,7 +14,7 @@ const  Statistical = () => {
       </div>
 
       <div className='h-[304px]'>
-        <LineChart  />
+        {!!chartRecord?.labels && <LineChart dataChart={chartRecord} />} 
       </div> 
 
       <div>

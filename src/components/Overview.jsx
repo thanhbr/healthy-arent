@@ -1,12 +1,14 @@
 import React from 'react'
 import { mealOverview } from '../contants'
 import LineChart from './Charts/LineChart.jsx';
+import useOverview from '../pages/Home/hooks/useOverview';
 
 const Overview = () => {
+  const { chartOverview } = useOverview()
   return (
     <section id='home-overview'  className='pt-[64px] flex'>
       <OverviewLeft />
-      <OverviewRight />
+      {!!chartOverview?.labels && <OverviewRight dataChart={chartOverview} />}
     </section>
   )
 }
@@ -28,10 +30,10 @@ const OverviewLeft = () => {
   )
 }
 
-const OverviewRight = () => {
+const OverviewRight = ({dataChart}) => {
   return (
     <div className='h-[312px] xxl:min-w-[1363px] lg:min-w-[740px]'>
-      <LineChart  />
+      <LineChart dataChart={dataChart}  />
     </div>
   )
 }
