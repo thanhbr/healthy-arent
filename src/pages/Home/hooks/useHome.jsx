@@ -50,7 +50,7 @@ const useHome = () => {
     })
     dispatch({
       type: homeAction.UPDATE_RECOMMENDED_LIST,
-      payload: recommendedList
+      payload: recommendedList.slice(0,8)
     })
 
     // === FOOTER ===

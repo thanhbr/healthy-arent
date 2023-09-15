@@ -9,6 +9,14 @@ import imgMeal from "../assets/images/food/meal.png"
 import imgBodyRecord from "../assets/images/statistical/body-record.png"
 import imgMyDiary from "../assets/images/statistical/my-diary.png"
 import imgMyExercise from "../assets/images/statistical/my-exercise.png"
+import imgRecommended1 from "../assets/images/recommended/img-1.png"
+import imgRecommended2 from "../assets/images/recommended/img-2.png"
+import imgRecommended3 from "../assets/images/recommended/img-3.png"
+import imgRecommended4 from "../assets/images/recommended/img-4.png"
+import imgRecommended5 from "../assets/images/recommended/img-5.png"
+import imgRecommended6 from "../assets/images/recommended/img-6.png"
+import imgRecommended7 from "../assets/images/recommended/img-7.png"
+import imgRecommended8 from "../assets/images/recommended/img-8.png"
 import {ICON} from "../interface/icons"
 
 export const navLinks = [
@@ -420,56 +428,56 @@ export const recommendedList = [
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended1
    },
    {
     id: 2,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended2
    },
    {
     id: 3,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended3
    },
    {
     id: 4,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended4
    },
    {
     id: 5,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended5
    },
    {
     id: 6,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended6
    },
    {
     id: 7,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended7
    },
    {
     id: 8,
     date: '2021.05.17-23:25',
     title: '魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ',
     tags: ['魚料理', '和食', 'DHA'],
-    image: ''
+    image: imgRecommended8
    },
    {
     id: 9,

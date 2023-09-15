@@ -42,23 +42,27 @@ const ListRecommended = ({data, ...props}) => {
       <div className='grid grid-cols-4 gap-[8px] container-page'>
         {data.map(item => (
           <div key={item.id }>
-            <div>
+            <div className='relative'>
               <ReactImageFallback
                 src={item?.image}
                 fallbackImage="/no-photo.jpg"
                 alt={item?.title}
                 className='bg-dark_600 opacity-[0.75] w-[100%]'
               />
-              <div>
+              <div className='absolute bottom-0 text-light py-[4px] px-[8px] bg-primary_300 text-[15px]'>
                 <span>{item?.date?.split('-')[0]}   </span>
                 <span>{item?.date?.split('-')[1]}</span>
               </div>
             </div>
             <div>
-              <p>{item?.title || '---'}</p>
+              <p className='two-lines'>
+                {item?.title || '---'}
+              </p>
               <div className='flex'>
                 {item?.tags?.map(tag => (
-                  <p>#{tag || '---'}</p>
+                  <p className='text-primary_400 font-thin text-[12px] tracking-[0.06px]'>
+                    #{tag || '---'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </p>
                 ))}
               </div>
             </div>
