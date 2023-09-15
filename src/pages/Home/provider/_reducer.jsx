@@ -10,6 +10,7 @@ export const homeInitialState = {
     chart: []
   },
   foods: { 
+    activePeriod: 'all',
     periods: [],
     listFood: [],
     listOriginFood: []
@@ -37,6 +38,7 @@ export const homeAction = {
   UPDATE_FOOD_PERIODS: 'UPDATE_FOOD_PERIODS',
   UPDATE_FOOD_LIST: 'UPDATE_FOOD_LIST',
   UPDATE_FOOD_LIST_ORIGIN: 'UPDATE_FOOD_LIST_ORIGIN',
+  UPDATE_FOOD_ACTIVE_PERIODS: 'UPDATE_FOOD_ACTIVE_PERIODS',
 
   UPDATE_STATISTICAL_RECORD: 'UPDATE_STATISTICAL_RECORD',
   UPDATE_STATISTICAL_CHART: 'UPDATE_STATISTICAL_CHART',
@@ -86,6 +88,15 @@ export const homeReducer = (state, action) => {
           ...state.foods,
           listFood: action?.payload?.listFood || [],
           listOriginFood: action?.payload?.listOriginFood || [],
+        } 
+      }
+
+    case homeAction.UPDATE_FOOD_ACTIVE_PERIODS:
+      return {
+        ...state,
+        foods: {
+          ...state.foods,
+          activePeriod: action.payload
         } 
       }
 

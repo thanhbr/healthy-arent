@@ -55,21 +55,25 @@ export const overviewChart = [
 export const periods = [
   {
     id: 1,
+    code: 'morning',
     title: 'Morning',
     image: ICON.periodMorning
   },
   {
     id: 2,
+    code: 'lunch',
     title: 'Lunch',
     image: ICON.periodMorning
   },
   {
     id: 3,
+    code: 'dinner',
     title: 'Dinner',
     image: ICON.periodMorning
   },
   {
     id: 4,
+    code: 'snack',
     title: 'Snack',
     image: ICON.periodSnack
   },
