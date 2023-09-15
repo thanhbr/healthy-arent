@@ -5,7 +5,6 @@ const useOverview = () => {
   const {state, } = useContext(HomeContext)
 
   const chartOverview = state?.overview?.chart
-  console.log('state', state);
 
   return {
     chartOverview

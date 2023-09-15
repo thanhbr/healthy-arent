@@ -14,7 +14,7 @@ const  Statistical = () => {
       </div>
 
       <div className='h-[304px]'>
-        {!!chartRecord?.labels && <LineChart dataChart={chartRecord} />} 
+        {!!chartRecord?.labels && <LineChart dataChart={chartRecord} type={'record'} />} 
       </div> 
 
       <div>

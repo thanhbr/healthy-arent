@@ -10,6 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { statisticalBodyDate } from '../../contants';
 
 ChartJS.register(
   CategoryScale,
@@ -84,8 +85,8 @@ const LineChart = ({dataChart, type}) => {
       padding: {
         left: 50,
         right: 50,
-        top: 30,
-        bottom: 30,
+        top: type === 'record' ? 70 : 30,
+        bottom: type === 'record' ? 50 : 30,
       },
     }
   }
@@ -105,11 +106,31 @@ const LineChart = ({dataChart, type}) => {
 
   return (
     <>
+      {type === 'record' &&
+        <div className='absolute mt-[16px] ml-[24px] flex'>
+          <p className=' text-light font-thin text-[15px] w-[80px]'>
+            BODY RECORD
+          </p>
+          <p className='text-light text-[22px] font-normal'>2021.05.21</p>
+        </div>
+      }
       <Line 
         data={data} 
         options={options}
         plugins={[plugin]}
       />
+      {type === 'record' && (
+        <div className='flex gap-[16px]'>
+          {statisticalBodyDate.map(date => (
+            <p 
+              key={date?.id}
+              className={`w-[56px] h-[26px] rounded-[11px] ${date.active ? 'bg-primary_300' : 'bg-light'} text-center mt-[-42px] ml-[24px] cursor-pointer`}
+            >
+              {date?.title || '---'}
+            </p>
+          ))}
+        </div>
+      )}
     </>
   )
 } 

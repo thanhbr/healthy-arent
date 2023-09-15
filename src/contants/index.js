@@ -226,16 +226,39 @@ export const statisticalBodyRecord = {
   data: [
     {
       id: 1,
-      data: [39, 35, 30, 28, 23, 22, 20, 19,17,13,5,0],
+      data: [46, 35, 30, 28, 23, 22, 20, 19,17,13,5,0],
       color: '#8FE9D0'
     },
     {
       id: 2,
-      data: [39, 37, 28, 32, 30, 27, 31, 26,25,24,8,5],
+      data: [46, 37, 28, 32, 30, 27, 31, 26,25,24,8,5],
       color: '#FFCC21'
     },
   ]
 }
+
+export const statisticalBodyDate = [
+  {
+    id: 1,
+    title: '日',
+    active: false
+  },
+  {
+    id: 2,
+    title: '週',
+    active: false
+  },
+  {
+    id: 3,
+    title: '月',
+    active: false
+  },
+  {
+    id: 4,
+    title: '年',
+    active: true
+  },
+]
 
 export const statisticalMyExercise = [
   {

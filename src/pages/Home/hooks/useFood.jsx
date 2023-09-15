@@ -10,8 +10,6 @@ const useFood = () => {
   const listOrginFood = state?.foods?.listOriginFood
   const showMoreFood = listFood?.length !== listOrginFood?.length
 
-  console.log('state', state);
-
   const handleShowFoodMore = _ => {
     dispatch({
       type: homeAction.UPDATE_FOOD_LIST,
