@@ -128,29 +128,25 @@ export const foods = [
     id: 9,
     name: 'Ramen noodles',
     period: periods[3].title,
-    date: '05.21',
-    image: imgSoba
+    date: '05.21'
   },
   {
     id: 10,
     name: 'Japanese fried chicken',
     period: periods[0].title,
-    date: '05.19',
-    image: imgSoba
+    date: '05.19'
   },
   {
     id: 11,
     name: 'Hot pot Shabu',
     period: periods[3].title,
-    date: '05.18',
-    image: imgSoba
+    date: '05.18'
   },
   {
     id: 12,
     name: 'Gyutanyaki tongue',
     period: periods[2].title,
-    date: '05.18',
-    image: imgSoba
+    date: '05.18'
   },
 ]
 
@@ -503,4 +499,31 @@ export const recommendedList = [
     tags: ['魚料理', '和食', 'DHA'],
     image: ''
    },
+]
+
+export const listFooter = [
+  {
+    id: 1,
+    name: '会員登録'
+  },
+  {
+    id: 2,
+    name: '運営会社'
+  },
+  {
+    id: 3,
+    name: '利用規約'
+  },
+  {
+    id: 4,
+    name: '個人情報の取扱について'
+  },
+  {
+    id: 5,
+    name: '特定商取引法に基づく表記'
+  },
+  {
+    id: 6,
+    name: 'お問い合わせ'
+  },
 ]

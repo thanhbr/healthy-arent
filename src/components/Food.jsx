@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { foods, periods } from "../contants";
 import { ICON } from '../interface/icons';
 import Button from './Button';
+import ReactImageFallback from 'react-image-fallback';
 
 const Food = () => {
   const [listFood, setListFood] = useState(foods.slice(0,8))
@@ -26,8 +27,9 @@ const Food = () => {
       <div className='grid grid-cols-4 gap-[8px] container-page'>
         {listFood?.map(food => (
           <div key={food.id} className='relative'>
-            <img 
-              src={food?.image} 
+            <ReactImageFallback
+              src={food?.image}
+              fallbackImage="/no-photo.jpg"
               alt={food?.name}
               className='w-[100%] cursor-pointer'
             />
@@ -39,8 +41,8 @@ const Food = () => {
         ))}
       </div>
 
-      <div className='w-[100%] flex justify-center mt-[28px ]'>
-        <Button>記録をもっと見る</Button>
+      <div className='w-[100%] flex justify-center mt-[28px]'>
+        <Button onClick={handleShowMore}>記録をもっと見る</Button>
       </div>
     </section>
   )

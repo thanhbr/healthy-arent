@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { homeAction, homeInitialState, homeReducer } from '../provider/_reducer'
-import { foods, overviewChart, periods, recommendedCategory, recommendedList, statisticalBodyRecord, statisticalHeader, statisticalMyDiary, statisticalMyExercise } from '../../../contants'
+import { foods, listFooter, overviewChart, periods, recommendedCategory, recommendedList, statisticalBodyRecord, statisticalHeader, statisticalMyDiary, statisticalMyExercise } from '../../../contants'
 
 const useHome = () => {
   const [state, dispatch] = useReducer(homeReducer, homeInitialState)
@@ -51,6 +51,12 @@ const useHome = () => {
     dispatch({
       type: homeAction.UPDATE_RECOMMENDED_LIST,
       payload: recommendedList
+    })
+
+    // === FOOTER ===
+    dispatch({
+      type: homeAction.UPDATE_FOOTER_LIST,
+      payload: listFooter
     })
   }
 

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Recommended, Food, Navbar, Overview, Statistical } from '../../components'
 import useHome from './hooks/useHome'
 import { HomeProvider } from './provider'
+import Footer from '../../components/Footer'
 
 const HomePage = () => {
   const {provider, fetchOrigin} = useHome()
@@ -18,6 +19,7 @@ const HomePage = () => {
       <Food />
       <Statistical />
       <Recommended />
+      <Footer />
     </HomeProvider>
   )
 }
