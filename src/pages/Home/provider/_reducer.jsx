@@ -19,7 +19,8 @@ export const homeInitialState = {
     myRecord: [],
     chartRecord: [],
     tableExercise: [],
-    tableDiary: []
+    tableDiary: [],
+    tableDiaryOrigin: [],
   },
   recommended: {
     category: [],
@@ -43,6 +44,7 @@ export const homeAction = {
   UPDATE_STATISTICAL_RECORD: 'UPDATE_STATISTICAL_RECORD',
   UPDATE_STATISTICAL_CHART: 'UPDATE_STATISTICAL_CHART',
   UPDATE_STATISTICAL_EXERCISE: 'UPDATE_STATISTICAL_EXERCISE',
+  UPDATE_STATISTICAL_DIARY_ORIGIN: 'UPDATE_STATISTICAL_DIARY_ORIGIN',
   UPDATE_STATISTICAL_DIARY: 'UPDATE_STATISTICAL_DIARY',
 
   UPDATE_RECOMMENDED_CATEGORY: 'UPDATE_RECOMMENDED_CATEGORY',
@@ -124,6 +126,16 @@ export const homeReducer = (state, action) => {
         statistical: {
           ...state.statistical,
           tableExercise: action.payload
+        } 
+      }
+
+    case homeAction.UPDATE_STATISTICAL_DIARY_ORIGIN:
+      return {
+        ...state,
+        statistical: {
+          ...state.statistical,
+          tableDiary: action.payload.tableDiary,
+          tableDiaryOrigin: action.payload.tableDiaryOrigin
         } 
       }
 

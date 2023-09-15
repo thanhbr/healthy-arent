@@ -5,7 +5,7 @@ import ReactImageFallback from 'react-image-fallback'
 import Button from './Button'
 
 const  Statistical = () => {
-  const { myRecord, tableExercise, tableDiary } = useStatistical()
+  const { myRecord, tableExercise, tableDiary, showMoreDiary, methods } = useStatistical()
 
   return (
     <section className='container-page mt-[72px]'>
@@ -22,7 +22,11 @@ const  Statistical = () => {
       </div>
 
       <div>
-        <MyDiary data={tableDiary} /> 
+        <MyDiary 
+          data={tableDiary} 
+          showMoreDiary={showMoreDiary}
+          handleShowMore={methods.handleShowMoreDiary}
+        /> 
       </div>
     </section>
   )
@@ -88,7 +92,7 @@ const Exercise = ({data, ...props}) => {
   )
 }
 
-const MyDiary = ({data, ...props}) => {
+const MyDiary = ({data, showMoreDiary, handleShowMore, ...props}) => {
   return (
     <div {...props} className='mt-[56px]'>
       <p className='text-[22px] font-normal'>
@@ -103,9 +107,18 @@ const MyDiary = ({data, ...props}) => {
           </div>
         ))}
       </div>
-      <div className='w-[100%] flex justify-center'>
-        <Button className={'mt-[30px]'}>自分の日記をもっと見る</Button>
-      </div>
+      {showMoreDiary 
+        && (
+          <div className='w-[100%] flex justify-center'>
+            <Button 
+              className={'mt-[30px]'}
+              onClick={handleShowMore}
+            >
+              自分の日記をもっと見る
+            </Button>
+          </div>
+      )
+      }
     </div>
   )
 }

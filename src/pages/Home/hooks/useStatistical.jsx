@@ -1,17 +1,31 @@
 import React, { useContext } from 'react'
 import { HomeContext } from '../provider/_context'
+import { homeAction } from '../provider/_reducer'
 
 const useStatistical = () => {
-  const {state, } = useContext(HomeContext)
+  const {state, dispatch} = useContext(HomeContext)
 
   const myRecord = state?.statistical?.myRecord
   const tableExercise = state?.statistical?.tableExercise
   const tableDiary = state?.statistical?.tableDiary
+  const tableDiaryOrigin = state?.statistical?.tableDiaryOrigin
+  const showMoreDiary = tableDiary?.length !== tableDiaryOrigin?.length
+
+  const handleShowMoreDiary = _ => {
+    dispatch({
+      type: homeAction.UPDATE_STATISTICAL_DIARY,
+      payload: tableDiaryOrigin
+    })
+  }
 
   return {
     myRecord,
     tableExercise,
-    tableDiary
+    tableDiary,
+    showMoreDiary,
+    methods: {
+      handleShowMoreDiary
+    }
   }
 }
 

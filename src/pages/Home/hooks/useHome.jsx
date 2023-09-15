@@ -39,8 +39,11 @@ const useHome = () => {
       payload: statisticalMyExercise
     })
     dispatch({
-      type: homeAction.UPDATE_STATISTICAL_DIARY,
-      payload: statisticalMyDiary 
+      type: homeAction.UPDATE_STATISTICAL_DIARY_ORIGIN,
+      payload: {
+        tableDiary: statisticalMyDiary?.slice(0, 8),
+        tableDiaryOrigin: statisticalMyDiary
+      }  
     })
 
     // === RECOMMENT ===
