@@ -1,5 +1,6 @@
 
 export const homeInitialState = {
+  showMenu: false,
   overview: {
     image: '',
     info: {
@@ -35,6 +36,7 @@ export const homeInitialState = {
 
 
 export const homeAction = {
+  SHOW_MENU: 'SHOW_MENU',
   UPDATE_OVERVIEW_CHART: 'UPDATE_OVERVIEW_CHART',
 
   UPDATE_FOOD_PERIODS: 'UPDATE_FOOD_PERIODS',
@@ -58,6 +60,12 @@ export const homeAction = {
 
 export const homeReducer = (state, action) => {
   switch (action.type) {
+    case homeAction.SHOW_MENU:
+      return {
+        ...state,
+        showMenu: action.payload || false
+      }
+
     case homeAction.UPDATE_OVERVIEW_CHART:
       return {
         ...state,

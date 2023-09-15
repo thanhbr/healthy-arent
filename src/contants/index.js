@@ -37,6 +37,33 @@ export const navLinks = [
   },
 ]
 
+export const menuLink = [
+  {
+    id: 1,
+    name: '自分の記録'
+  },
+  {
+    id: 2,
+    name: '体重グラフ'
+  },
+  {
+    id: 3,
+    name: '目標'
+  },
+  {
+    id: 4,
+    name: '選択中のコース'
+  },
+  {
+    id: 5,
+    name: 'コラム一覧'
+  },
+  {
+    id: 6,
+    name: '設定'
+  },
+]
+
 export const overviewChart = [
   {
     id: 1,

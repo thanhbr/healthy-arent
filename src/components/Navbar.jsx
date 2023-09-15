@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import logo from "../assets/images/logo.png"
 import { navLinks } from "../contants"
 import { ICON } from '../interface/icons'
+import DrawMenu from './DrawMenu'
+import useNavbar from '../pages/Home/hooks/useNavbar'
+
+function useOutsideAlerter(ref) {
+  const {methods} = useNavbar()
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        methods.toggleMenu()
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+}
 
 const Navbar = () => {
+  const {showMenu, methods} = useNavbar()
+  const wrapperRef = useRef()
+  useOutsideAlerter(wrapperRef)
+
   return (
     <nav className='bg-dark_500_text w-full flex py-4 justify-between items-center fixed z-50'>
       <div className='container-page mx-auto flex'>
@@ -26,9 +47,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <span className='ml-[32px] cursor-pointer'>{ICON.menu}</span>
+        <span 
+          ref={wrapperRef}
+          className='ml-[32px] cursor-pointer' 
+          onClick={methods.toggleMenu}
+        >
+          {showMenu ? ICON.closeMenu : ICON.menu}
+        </span>
       </div>
-
+      {showMenu && <DrawMenu />}
     </nav>
   )
 }
