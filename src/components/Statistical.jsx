@@ -4,14 +4,12 @@ import useStatistical from '../pages/Home/hooks/useStatistical'
 import ReactImageFallback from 'react-image-fallback'
 
 const  Statistical = () => {
-  const { myRecord, tableDiary } = useStatistical()
+  const { myRecord, tableExercise, tableDiary } = useStatistical()
 
   return (
     <section className='container-page mt-[72px]'>
       <div>
-        <MyRecord 
-          data={myRecord}
-        />
+        <MyRecord data={myRecord} />
       </div>
 
       <div className='h-[304px]'>
@@ -19,7 +17,7 @@ const  Statistical = () => {
       </div> 
 
       <div>
-        <Exercise />
+        <Exercise data={tableExercise} />
       </div>
 
       <div>
@@ -62,12 +60,28 @@ const MyRecord = ({data, ...props}) => {
   )
 }
 
-const Exercise = ({...props}) => { 
+const Exercise = ({data, ...props}) => { 
   return (
-    <div {...props}>
-       <div>
-        <p>MY EXERCISE</p>
-        <p>2021.05.21</p>
+    <div {...props} className='bg-dark_600 mt-[56px] p-4'>
+       <div className='flex text-light'>
+        <p className='w-[90px] font-normal text-[15px]'>MY EXERCISE</p>
+        <p className='font-normal text-[22px]'>2021.05.21</p>
+       </div>
+       <div className='grid grid-cols-2 gap-2 max-h-[207px] overflow-y-scroll overflow-x-hidden scroll-custom'>
+          {data?.map(exer => (
+            <div key={exer.id} className='mt-1 max-h-[40px]'>
+              <div className='flex justify-between mr-[48px] border-b-[2px] border-dark_500_text'>
+                <ul>
+                  <li className='text-light leading-[22px] flex gap-[12px]'>
+                    <span className='text-[4px]'>● </span>
+                    {exer?.title || '---'}
+                  </li>
+                  <li className='text-primary_300 leading-[22px] ml-[16px]'>{exer?.caloConsumed || 0}kcal</li>
+                </ul>
+                <p className='text-primary_300'>{exer?.time || 0} min</p>
+              </div>
+            </div>
+          ))}
        </div>
     </div>
   )

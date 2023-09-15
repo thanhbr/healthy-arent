@@ -5,10 +5,12 @@ const useStatistical = () => {
   const {state, dispatch} = useContext(HomeContext)
 
   const myRecord = state?.statistical?.myRecord
+  const tableExercise = state?.statistical?.tableExercise
   const tableDiary = state?.statistical?.tableDiary
 
   return {
     myRecord,
+    tableExercise,
     tableDiary
   }
 }
