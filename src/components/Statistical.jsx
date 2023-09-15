@@ -103,7 +103,7 @@ const MyDiary = ({data, ...props}) => {
         ))}
       </div>
       <div className='w-[100%] flex justify-center'>
-        <button className='font-sansCJK_JP bg-  food-btn-more'>
+        <button className='font-sansCJK_JP bg-linear  food-btn-more'>
           自分の日記をもっと見る
         </button>
       </div>
