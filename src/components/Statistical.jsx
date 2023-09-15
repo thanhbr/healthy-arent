@@ -43,7 +43,7 @@ const MyRecord = ({data, ...props}) => {
         >
           <ReactImageFallback
             src={record?.image}
-            fallbackImage="/no-photo.jpg"
+            fallbackImage="/no-img.jpg"
             alt={'avatar'}
             className='bg-dark_600 opacity-[0.75] w-[100%]'
           />

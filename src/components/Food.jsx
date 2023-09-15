@@ -32,7 +32,7 @@ const Food = () => {
           <div key={food.id} className='relative border-[1px] border-gray_400'>
             <ReactImageFallback
               src={food?.image}
-              fallbackImage="/no-photo.jpg"
+              fallbackImage="/no-img.jpg"
               alt={food?.name}
               className='w-[100%] cursor-pointer'
             />

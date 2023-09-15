@@ -45,7 +45,7 @@ const ListRecommended = ({data, ...props}) => {
             <div className='relative'>
               <ReactImageFallback
                 src={item?.image}
-                fallbackImage="/no-photo.jpg"
+                fallbackImage="/no-img.jpg"
                 alt={item?.title}
                 className='bg-dark_600 opacity-[0.75] w-[100%]'
               />
