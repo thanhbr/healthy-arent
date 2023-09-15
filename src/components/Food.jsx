@@ -6,7 +6,7 @@ import ReactImageFallback from 'react-image-fallback';
 import useFood from '../pages/Home/hooks/useFood';
 
 const Food = () => {
-  const { activePeriod, listFood, methods } = useFood()
+  const { showMoreFood, listFood, methods } = useFood()
 
   return (
     <section>
@@ -43,7 +43,7 @@ const Food = () => {
           </div>
         ))}
       </div>
-      {listFood.length >= 8 && 
+      {showMoreFood && 
         (
           <div className='w-[100%] flex justify-center mt-[28px]'>
             <Button onClick={methods.handleShowFoodMore}>記録をもっと見る</Button>

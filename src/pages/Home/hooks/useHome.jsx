@@ -52,8 +52,11 @@ const useHome = () => {
       payload: recommendedCategory
     })
     dispatch({
-      type: homeAction.UPDATE_RECOMMENDED_LIST,
-      payload: recommendedList.slice(0,8)
+      type: homeAction.UPDATE_RECOMMENDED_LIST_ORIGIN,
+      payload: {
+        list: recommendedList.slice(0,8),
+        listOrigin: recommendedList
+      } 
     })
 
     // === FOOTER ===

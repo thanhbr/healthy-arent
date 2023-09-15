@@ -4,12 +4,16 @@ import ReactImageFallback from 'react-image-fallback'
 import Button from './Button'
 
 const Recommended = () => {
-  const { categories, listRecommended } = useRecommended()
+  const { categories, listRecommended, showMoreRecommended, methods } = useRecommended()
 
   return (
     <section className='mt-[56px]'>
       <Category data={categories} />
-      <ListRecommended data={listRecommended} />
+      <ListRecommended 
+        data={listRecommended} 
+        showMore={showMoreRecommended}
+        handleShowMore={methods.handleShowMoreRecommended}
+      />
     </section>
   )
 }
@@ -36,10 +40,10 @@ const Category = ({data, ...props}) => {
   )
 }
 
-const ListRecommended = ({data, ...props}) => {
+const ListRecommended = ({data, showMore, handleShowMore, ...props}) => {
   return (
     <div {...props}>
-      <div className='grid grid-cols-4 gap-[8px] container-page'>
+      <div className='grid grid-cols-4 gap-[8px] container-page mb-[28px]'>
         {data.map(item => (
           <div key={item.id}>
             <div className='relative'>
@@ -47,7 +51,7 @@ const ListRecommended = ({data, ...props}) => {
                 src={item?.image}
                 fallbackImage="/no-img.jpg"
                 alt={item?.title}
-                className='bg-dark_600 opacity-[0.75] w-[100%]'
+                className='bg-dark_600 opacity-[0.75] w-[100%] border-[1px] border-gray-400'
               />
               <div className='absolute bottom-0 text-light py-[4px] px-[8px] bg-primary_300 text-[15px]'>
                 <span>{item?.date?.split('-')[0]}   </span>
@@ -69,11 +73,13 @@ const ListRecommended = ({data, ...props}) => {
           </div>
         ))}
       </div>
-      <div className='w-[100%] flex justify-center mt-[28px] mb-[64px]'>
-        <Button>
-          コラムをもっと見る
-        </Button>
-      </div>
+      {showMore && (
+        <div className='w-[100%] flex justify-center mb-[64px]'>
+          <Button onClick={handleShowMore}>
+            コラムをもっと見る
+          </Button>
+        </div>
+      )}
     </div>
   )
 }

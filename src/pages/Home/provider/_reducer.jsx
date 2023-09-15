@@ -24,7 +24,8 @@ export const homeInitialState = {
   },
   recommended: {
     category: [],
-    list: []
+    list: [],
+    listOrigin: [],
   },
   footer: {
     list: [] 
@@ -49,8 +50,9 @@ export const homeAction = {
 
   UPDATE_RECOMMENDED_CATEGORY: 'UPDATE_RECOMMENDED_CATEGORY',
   UPDATE_RECOMMENDED_LIST: 'UPDATE_RECOMMENDED_LIST',
+  UPDATE_RECOMMENDED_LIST_ORIGIN: 'UPDATE_RECOMMENDED_LIST_ORIGIN',
 
-  UPDATE_FOOTER_LISCROLL_TO_TOPST: 'UPDATE_FOOTER_LIST',
+  UPDATE_FOOTER_LIST: 'UPDATE_FOOTER_LIST',
   SCROLL_TO_TOP: 'SCROLL_TO_TOP'
 }
 
@@ -157,7 +159,18 @@ export const homeReducer = (state, action) => {
         } 
       }
 
+    case homeAction.UPDATE_RECOMMENDED_LIST_ORIGIN:
+      return {
+        ...state,
+        recommended: {
+          ...state?.recommended,
+          list: action.payload?.list,
+          listOrigin: action.payload?.listOrigin
+        } 
+      }
+
     case homeAction.UPDATE_RECOMMENDED_LIST:
+      console.log('action.payload', action.payload);
       return {
         ...state,
         recommended: {

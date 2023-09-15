@@ -8,6 +8,7 @@ const useFood = () => {
   const activePeriod = state?.foods?.activePeriod
   const listFood = state?.foods?.listFood
   const listOrginFood = state?.foods?.listOriginFood
+  const showMoreFood = listFood?.length !== listOrginFood?.length
 
   const handleShowFoodMore = _ => {
     dispatch({
@@ -32,6 +33,7 @@ const useFood = () => {
   return {
     activePeriod,
     listFood,
+    showMoreFood,
     methods: {
       handleShowFoodMore,
       handleFilterFood
