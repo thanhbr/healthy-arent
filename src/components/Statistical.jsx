@@ -2,6 +2,7 @@ import React from 'react'
 import LineChart from './Charts/LineChart'
 import useStatistical from '../pages/Home/hooks/useStatistical'
 import ReactImageFallback from 'react-image-fallback'
+import Button from './Button'
 
 const  Statistical = () => {
   const { myRecord, tableExercise, tableDiary } = useStatistical()
@@ -103,9 +104,7 @@ const MyDiary = ({data, ...props}) => {
         ))}
       </div>
       <div className='w-[100%] flex justify-center'>
-        <button className='font-sansCJK_JP bg-linear  food-btn-more'>
-          自分の日記をもっと見る
-        </button>
+        <Button className={'mt-[30px]'}>自分の日記をもっと見る</Button>
       </div>
     </div>
   )

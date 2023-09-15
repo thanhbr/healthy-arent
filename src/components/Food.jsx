@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { foods, periods } from "../contants";
 import { ICON } from '../interface/icons';
+import Button from './Button';
 
 const Food = () => {
   const [listFood, setListFood] = useState(foods.slice(0,8))
@@ -38,13 +39,8 @@ const Food = () => {
         ))}
       </div>
 
-      <div className='w-[100%] flex justify-center'>
-        <button 
-          className='font-sansCJK_JP bg-linear food-btn-more'
-          onClick={handleShowMore}
-        >
-          記録をもっと見る
-        </button>
+      <div className='w-[100%] flex justify-center mt-[28px ]'>
+        <Button>記録をもっと見る</Button>
       </div>
     </section>
   )

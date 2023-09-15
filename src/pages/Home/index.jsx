@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Category, Food, Navbar, Overview, Statistical } from '../../components'
+import { Recommended, Food, Navbar, Overview, Statistical } from '../../components'
 import useHome from './hooks/useHome'
 import { HomeProvider } from './provider'
 
@@ -17,7 +17,7 @@ const HomePage = () => {
       <Overview />
       <Food />
       <Statistical />
-      <Category />
+      <Recommended />
     </HomeProvider>
   )
 }

@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Overview from "./Overview";
 import Food from "./Food";
 import Statistical from "./Statistical";
-import Category from "./Category";
+import Recommended from "./Recommended";
 
 
 export {
@@ -10,5 +10,5 @@ export {
   Overview,
   Food,
   Statistical,
-  Category
+  Recommended
 }
