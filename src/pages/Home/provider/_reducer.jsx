@@ -35,6 +35,7 @@ export const homeAction = {
   UPDATE_OVERVIEW_CHART: 'UPDATE_OVERVIEW_CHART',
 
   UPDATE_FOOD_PERIODS: 'UPDATE_FOOD_PERIODS',
+  UPDATE_FOOD_LIST: 'UPDATE_FOOD_LIST',
   UPDATE_FOOD_LIST_ORIGIN: 'UPDATE_FOOD_LIST_ORIGIN',
 
   UPDATE_STATISTICAL_RECORD: 'UPDATE_STATISTICAL_RECORD',
@@ -66,6 +67,15 @@ export const homeReducer = (state, action) => {
         foods: {
           ...state.foods,
           periods: action.payload
+        } 
+      }
+
+    case homeAction.UPDATE_FOOD_LIST:
+      return {
+        ...state,
+        foods: {
+          ...state.foods,
+          listFood: action?.payload || [],
         } 
       }
 

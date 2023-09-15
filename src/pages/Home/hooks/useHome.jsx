@@ -20,7 +20,7 @@ const useHome = () => {
     dispatch({
       type: homeAction.UPDATE_FOOD_LIST_ORIGIN,
       payload: {
-        listFood: foods,
+        listFood: foods.slice(0,8),
         listOriginFood: foods,
       }
     })

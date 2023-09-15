@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { foods, periods } from "../contants";
 import { ICON } from '../interface/icons';
 import Button from './Button';
 import ReactImageFallback from 'react-image-fallback';
+import useFood from '../pages/Home/hooks/useFood';
 
 const Food = () => {
-  const [listFood, setListFood] = useState(foods.slice(0,8))
-  const handleShowMore = _ => setListFood(foods)
-
+  const { listFood, methods } = useFood()
 
   return (
     <section>
@@ -42,7 +41,7 @@ const Food = () => {
       </div>
 
       <div className='w-[100%] flex justify-center mt-[28px]'>
-        <Button onClick={handleShowMore}>記録をもっと見る</Button>
+        <Button onClick={methods.handleShowFoodMore}>記録をもっと見る</Button>
       </div>
     </section>
   )
